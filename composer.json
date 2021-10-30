@@ -1,6 +1,6 @@
 {
-  "name": "bravedave/mvp",
-  "description": "Minimum Viable Product",
+  "name": "bravedave/affitto",
+  "description": "Affitto - It means Rent",
   "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
@@ -11,7 +11,32 @@
   ],
   "autoload-dev": {
     "psr-4": {
-      "": "src/app/"
+      "": "src/app/",
+      "affitto\\": "src/affitto/"
+    }
+  },
+  "require": {
+    "ext-gd": "*",
+    "ext-zip": "*",
+    "ext-imagick": "*",
+    "bravedave/dvc": "*",
+    "bravedave/photolog": "*"
+  },
+  "require-dev": {
+    "ext-apcu": "*",
+    "matthiasmullie/scrapbook": "*"
+  },
+  "scripts": {
+    "post-update-cmd": "affitto\\postUpdate::upgrade"
+  },
+  "repositories": {
+    "smokealarm": {
+      "type": "git",
+      "url": "https://github.com/bravedave/smokealarm"
+    },
+    "photolog": {
+      "type": "git",
+      "url": "https://github.com/bravedave/photolog"
     }
   }
 }
