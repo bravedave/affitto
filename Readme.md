@@ -1,3 +1,3 @@
 # Affitto - It means Rent
 
-> _Property Management System_
+> _Rental Property Management_
